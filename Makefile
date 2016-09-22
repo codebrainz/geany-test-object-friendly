@@ -6,7 +6,7 @@ all: helloplugin.so
 clean:
 	$(RM) *.o *.so
 
-helloplugin.so: helloplugin.o
+helloplugin.so: helloplugin.o plugin.c
 	$(CC) -shared $(CFLAGS) -o $@ $^ $(LDFLAGS)
 
 .c.o:
